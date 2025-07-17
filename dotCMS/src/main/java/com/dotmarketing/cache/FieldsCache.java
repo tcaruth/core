@@ -65,7 +65,7 @@ public class FieldsCache {
      * This methods retrieves the fields from the cache based in the 
      * structure name. 
      * 
-     * This methods tries to retrive the fields from the cache, if the
+     * This methods tries to retrieve the fields from the cache, if the
      * structure were not found in the cache, it would try to find it in database
      * and store the fields in cache.
      * 

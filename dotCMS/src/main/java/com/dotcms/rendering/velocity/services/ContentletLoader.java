@@ -371,7 +371,7 @@ public class ContentletLoader implements DotLoader {
                         filesize = FileUtil.getsize(binFile);
                     }
                 } catch (IOException e) {
-                    Logger.error(this.getClass(), "Unable to retrive binary file for content id " + content.getIdentifier()
+                    Logger.error(this.getClass(), "Unable to retrieve binary file for content id " + content.getIdentifier()
                             + " field " + field.variable(), e);
                     continue;
                 }

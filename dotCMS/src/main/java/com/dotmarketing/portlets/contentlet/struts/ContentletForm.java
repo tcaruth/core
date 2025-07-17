@@ -186,7 +186,7 @@ public class ContentletForm extends ValidatorForm {
 		try{
 			return (Long)map.get(fieldVarName);
 		}catch (Exception e) {
-			 throw new DotRuntimeException("Unable to retrive field value", e);
+			 throw new DotRuntimeException("Unable to retrieve field value", e);
 		}
 	}
 	
@@ -198,7 +198,7 @@ public class ContentletForm extends ValidatorForm {
 		try{
 			return (Boolean)map.get(fieldVarName);
 		}catch (Exception e) {
-			 throw new DotRuntimeException("Unable to retrive field value", e);
+			 throw new DotRuntimeException("Unable to retrieve field value", e);
 		}
 	}
 	
@@ -210,7 +210,7 @@ public class ContentletForm extends ValidatorForm {
 		try{
 			return (Date)map.get(fieldVarName);
 		}catch (Exception e) {
-			 throw new DotRuntimeException("Unable to retrive field value", e);
+			 throw new DotRuntimeException("Unable to retrieve field value", e);
 		}
 	}
 	
@@ -222,7 +222,7 @@ public class ContentletForm extends ValidatorForm {
 		try{
 			return (Float)map.get(fieldVarName);
 		}catch (Exception e) {
-			 throw new DotRuntimeException("Unable to retrive field value", e);
+			 throw new DotRuntimeException("Unable to retrieve field value", e);
 		}
 	}
 
@@ -235,7 +235,7 @@ public class ContentletForm extends ValidatorForm {
 		try{
 			return map.get(fieldVarName);
 		}catch (Exception e) {
-			 throw new DotRuntimeException("Unable to retrive field value", e);
+			 throw new DotRuntimeException("Unable to retrieve field value", e);
 		}
 	}	
 	

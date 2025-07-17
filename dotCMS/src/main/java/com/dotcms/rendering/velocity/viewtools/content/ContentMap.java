@@ -199,7 +199,7 @@ public class ContentMap implements Serializable {
 		try {
 			final boolean respectFrontEndRoles = PageMode.get(Try.of(()->(HttpServletRequest)context.get("request")).getOrNull()).respectAnonPerms;
 			Object ret = null;
-			Field f = retriveField(fieldVariableName);
+			Field f = retrieveField(fieldVariableName);
 			if(f==null){
 				if("host".equalsIgnoreCase(fieldVariableName)){
 					try{
@@ -215,7 +215,7 @@ public class ContentMap implements Serializable {
 					return getStructure();
 				//http://jira.dotmarketing.net/browse/DOTCMS-6033
 				}else if(fieldVariableName.contains("FileURI")){
-					f = retriveField(fieldVariableName.replaceAll("FileURI", ""));
+					f = retrieveField(fieldVariableName.replaceAll("FileURI", ""));
 					if(f!=null && (f.getFieldType()!= null && f.getFieldType().equals(Field.FieldType.FILE.toString())
 							|| f.getFieldType().equals(Field.FieldType.IMAGE.toString()))){
 						String fid = (String)conAPI.getFieldValue(content, f);
@@ -240,7 +240,7 @@ public class ContentMap implements Serializable {
 								this.user, respectFrontEndRoles);
 			}else if(f != null && (f.getFieldType().equals(Field.FieldType.FILE.toString()) || f.getFieldType().equals(Field.FieldType.IMAGE.toString()))){
                 // Check if image or file is in fieldValueMap hashmap
-                Object fieldvalue = retriveFieldValue(f);
+                Object fieldvalue = retrieveFieldValue(f);
                 if (fieldvalue != null) {
                     return fieldvalue;
                 }
@@ -284,7 +284,7 @@ public class ContentMap implements Serializable {
                 }
 			}else if(f != null && f.getFieldType().equals(Field.FieldType.BINARY.toString())){
                 // Check if fileAsset or binaryMap is in fieldValueMap hashmap
-                Object fieldvalue = retriveFieldValue(f);
+                Object fieldvalue = retrieveFieldValue(f);
                 if (fieldvalue != null) {
                     return fieldvalue;
                 }
@@ -567,7 +567,7 @@ public class ContentMap implements Serializable {
 		return result;
 	}
 
-	private Field retriveField(String fieldVariableName) throws Exception{
+	private Field retrieveField(String fieldVariableName) throws Exception{
 		if(fieldMap == null){
 			fieldMap = UtilMethods.convertListToHashMap(fields, "getVelocityVarName", String.class);
 		}
@@ -581,7 +581,7 @@ public class ContentMap implements Serializable {
      * @param field
      * @returns field value object (FileAssetMap or BinaryMap)
      */
-    private Object retriveFieldValue(Field field) {
+    private Object retrieveFieldValue(Field field) {
         if (fieldValueMap == null) {
             // Lazy init
             fieldValueMap = new HashMap<>();

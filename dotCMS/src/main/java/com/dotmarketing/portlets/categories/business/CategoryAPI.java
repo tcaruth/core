@@ -168,7 +168,7 @@ public interface CategoryAPI {
 	/**
 	 * Retrieves the list of children categories associated
 	 * to the given id/inode, this method can be used
-	 * to retrived associated categories to another
+	 * to retrieved associated categories to another
 	 * type of objects like categories associated to 
 	 * contentlets
 	 * 
@@ -181,7 +181,7 @@ public interface CategoryAPI {
 	/**
 	 * Retrieves the list of children categories associated
 	 * to the given id/inode, this method can be used
-	 * to retrived associated categories to another
+	 * to retrieved associated categories to another
 	 * type of objects like categories associated to 
 	 * contentlets
 	 * 
@@ -197,7 +197,7 @@ public interface CategoryAPI {
 	/**
 	 * Retrieves the list of children categories associated
 	 * to the given id/inode, this method can be used
-	 * to retrived associated categories to another
+	 * to retrieved associated categories to another
 	 * type of objects like categories associated to 
 	 * contentlets
 	 * 
@@ -210,7 +210,7 @@ public interface CategoryAPI {
 	/**
 	 * Retrieves the list of children categories associated
 	 * to the given id/inode, this method can be used
-	 * to retrived associated categories to another
+	 * to retrieved associated categories to another
 	 * type of objects like categories associated to 
 	 * contentlets
 	 * 
@@ -225,7 +225,7 @@ public interface CategoryAPI {
 	/**
 	 * Retrieves the list of children categories associated
 	 * to the given id/inode, this method can be used
-	 * to retrived associated categories to another
+	 * to retrieved associated categories to another
 	 * type of objects like categories associated to 
 	 * contentlets
 	 * 

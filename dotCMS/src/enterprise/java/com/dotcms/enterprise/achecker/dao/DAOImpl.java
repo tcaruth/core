@@ -44,7 +44,7 @@ public class DAOImpl implements DAO {
 	 * Execute SQL
 	 * @access  protected
 	 * @param   $sql : SQL statment to be executed
-	 * @return  $rows: for 'select' sql, return retrived rows, 
+	 * @return  $rows: for 'select' sql, return retrieved rows, 
 	 *          true:  for non-select sql
 	 *          false: if fail
 	 * @author  Cindy Qi Li

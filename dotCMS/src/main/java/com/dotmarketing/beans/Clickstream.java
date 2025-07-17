@@ -252,7 +252,7 @@ public class Clickstream implements Serializable {
 	}
 
 	/**
-	 * Retrive the last date when this clickstream was saved in the database (this is only store in memory while the clickstream is in session)
+	 * Retrieve the last date when this clickstream was saved in the database (this is only store in memory while the clickstream is in session)
 	 * @return
 	 */
 	public Date getLastSaved() {

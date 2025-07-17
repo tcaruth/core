@@ -58,7 +58,7 @@ public class SecurityKeyResetTest extends IntegrationTestBase {
         PublishingEndPoint endpoint = createEndpoint(environment, originalKey, seedText);
         final String authKeyBefore = endpoint.getAuthKey().toString();
 
-        Assert.assertTrue(PushPublisher.retriveEndpointKeyDigest(endpoint).isPresent());
+        Assert.assertTrue(PushPublisher.retrieveEndpointKeyDigest(endpoint).isPresent());
 
         //Regenerate the company key spawns an event that should be handled by anyone who might be affected by the change in the keys.
         final Company updatedCompany = companyAPI.regenerateKey(company, admin);
@@ -70,7 +70,7 @@ public class SecurityKeyResetTest extends IntegrationTestBase {
         //After the company key reset event the endpoint should have changed.
         Assert.assertNotEquals(authKeyBefore, authKeyAfter);
 
-        Assert.assertTrue(PushPublisher.retriveEndpointKeyDigest(endpoint).isPresent());
+        Assert.assertTrue(PushPublisher.retrieveEndpointKeyDigest(endpoint).isPresent());
 
         //the company so we can access the new Key that
         final String decryptedText = Encryptor.decrypt(updatedCompany.getKeyObj(), authKeyAfter);

@@ -3721,7 +3721,7 @@ public class UtilMethods {
         if (adminMode) {
             HttpSession session = request.getSession();
 
-            // struts crappy messages have to be retrived from session
+            // struts crappy messages have to be retrieved from session
 
             request.setAttribute(Globals.ERROR_KEY, session.getAttribute(Globals.ERROR_KEY));
             session.removeAttribute(Globals.ERROR_KEY);

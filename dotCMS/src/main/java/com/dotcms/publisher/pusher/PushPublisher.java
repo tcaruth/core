@@ -433,14 +433,14 @@ public class PushPublisher extends Publisher {
 	 * @throws IOException
 	 */
 	//todo: I think this method can be remove
-	public static Optional<String> retriveEndpointKeyDigest(final PublishingEndPoint endpoint) throws IOException {
+	public static Optional<String> retrieveEndpointKeyDigest(final PublishingEndPoint endpoint) throws IOException {
 
-		final Optional<String> key = retriveEndpointKey(endpoint);
+		final Optional<String> key = retrieveEndpointKey(endpoint);
 
 		return key.isPresent() ? Optional.of(PublicEncryptionFactory.digestString(key.get())) : Optional.empty();
 	}
 
-	public static Optional<String> retriveEndpointKey(final PublishingEndPoint endpoint) throws IOException { // todo: create a method that allows to receives a key and use the com.dotcms.util.security.Encryptor instead PublicEncryptionFactory
+	public static Optional<String> retrieveEndpointKey(final PublishingEndPoint endpoint) throws IOException { // todo: create a method that allows to receives a key and use the com.dotcms.util.security.Encryptor instead PublicEncryptionFactory
 
 		if(endpoint==null || endpoint.getAuthKey() ==null) {
 			Logger.warn(PushPublisher.class,"Endpoint or endpoint key is null:" + endpoint);

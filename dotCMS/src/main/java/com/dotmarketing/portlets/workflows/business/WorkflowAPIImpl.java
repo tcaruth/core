@@ -2614,7 +2614,7 @@ public class WorkflowAPIImpl implements WorkflowAPI, WorkflowAPIOsgiService {
 
 	/**
 	 * Entry point that fires up the actions associated with the contentles. Expects a lucene query
-	 * that holds the logic to retrive a large selection of items performed on the UI.
+	 * that holds the logic to retrieve a large selection of items performed on the UI.
 	 *  @param action {@link WorkflowAction}
 	 * @param user {@link User}
 	 * @param luceneQuery luceneQuery
@@ -2633,7 +2633,7 @@ public class WorkflowAPIImpl implements WorkflowAPI, WorkflowAPIOsgiService {
 
 	/**
 	 * Entry point that fires up the actions associated with the contentles. Expects a lucene query
-	 * that holds the logic to retrive a large selection of items performed on the UI.
+	 * that holds the logic to retrieve a large selection of items performed on the UI.
 	 *  @param action {@link WorkflowAction}
 	 * @param user {@link User}
 	 * @param luceneQuery luceneQuery

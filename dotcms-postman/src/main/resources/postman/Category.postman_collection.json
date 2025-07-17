@@ -5803,7 +5803,7 @@
 							"",
 							"var jsonData = pm.response.json();",
 							"",
-							"pm.test(\"Comparing input parameter with retrived inode\", function () {",
+							"pm.test(\"Comparing input parameter with retrieved inode\", function () {",
 							"    pm.expect(jsonData.entity.inode).to.eql(pm.collectionVariables.get(('categoryInode')));",
 							"});"
 						],
@@ -5929,7 +5929,7 @@
 							"",
 							"var jsonData = pm.response.json();",
 							"",
-							"pm.test(\"Comparing input parameter with retrived key\", function () {",
+							"pm.test(\"Comparing input parameter with retrieved key\", function () {",
 							"    pm.expect(jsonData.entity.key).to.eql(pm.collectionVariables.get(('categoryKey')));",
 							"});"
 						],

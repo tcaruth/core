@@ -38,17 +38,17 @@ public enum AuthCredentialPushPublishUtil {
             String token;
 
             if (useJWTToken) {
-                final Optional<String> optionalToken = PushPublisher.retriveEndpointKey(endpoint);
+                final Optional<String> optionalToken = PushPublisher.retrieveEndpointKey(endpoint);
                 //here we're validating a token that comes from a different dotCMS instance
                 //The token should be signed with the same key on the remote instance as this one for this to make sense
                 if (optionalToken.isPresent() && APILocator.getApiTokenAPI().isWellFormedToken(optionalToken.get())) {
                     token = optionalToken.get();
                 } else {
-                    token = PushPublisher.retriveEndpointKeyDigest(endpoint).get();
+                    token = PushPublisher.retrieveEndpointKeyDigest(endpoint).get();
                 }
 
             } else {
-                token = PushPublisher.retriveEndpointKeyDigest(endpoint).get();
+                token = PushPublisher.retrieveEndpointKeyDigest(endpoint).get();
 
             }
 
@@ -134,7 +134,7 @@ public enum AuthCredentialPushPublishUtil {
 
         Logger.info(AuthCredentialPushPublishUtil.class, String.format("PublishingEndPoint: %s", publishingEndPoint != null ? publishingEndPoint.getServerName() : "null"));
 
-        Optional<String> key = PushPublisher.retriveEndpointKeyDigest(publishingEndPoint);
+        Optional<String> key = PushPublisher.retrieveEndpointKeyDigest(publishingEndPoint);
 
         Logger.info(AuthCredentialPushPublishUtil.class, String.format("PublishingEndPoint key: %s", key));
 

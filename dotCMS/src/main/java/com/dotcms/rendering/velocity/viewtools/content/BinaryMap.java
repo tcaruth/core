@@ -73,7 +73,7 @@ public class BinaryMap {
         try {
             return content.getBinaryMetadata(field.variable());
         } catch (Exception e) {
-            Logger.warnAndDebug(this.getClass(), "Unable to retrive binary file for content id " + content.getIdentifier()
+            Logger.warnAndDebug(this.getClass(), "Unable to retrieve binary file for content id " + content.getIdentifier()
                             + " field " + field.variable(), e);
             throw new DotRuntimeException(e);
         }

@@ -49,7 +49,7 @@ public class EditRelationshipAction extends DotPortletAction {
 			referer = PortletURLUtil.getActionURL(req, WindowState.MAXIMIZED.toString(), params);
 		}
 
-		//Retrive the field in the request
+		// Retrieve the field in the request
 		_retrieveRelationship(form,req,res);
 
 		HibernateUtil.startTransaction();
